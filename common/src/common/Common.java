@@ -6,7 +6,11 @@ import java.awt.*;
 public class Common {
     public void viewCommon(JFrame frame,JLabel label){
         frame.setTitle("聊天室登录");
+<<<<<<< HEAD
         frame.setIconImage(Toolkit.getDefaultToolkit().getImage("res//img//icon.jpg"));
+=======
+        frame.setIconImage(Toolkit.getDefaultToolkit().getImage("view\\res\\image\\icon.jpg"));
+>>>>>>> bc71a16a46c233ee9f24daf0d986e0959b53c158
         frame.setBounds(100, 100, 574, 403);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(null);
