@@ -7,8 +7,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
     <orderEntry type="module" module-name="client" />
     <orderEntry type="module" module-name="server" />
     <orderEntry type="module" module-name="view" />
+=======
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
   </component>
 </module>

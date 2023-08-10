@@ -2,7 +2,15 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
+<<<<<<< HEAD
 /../../../../../../:\Users\李涛\IdeaProjects\chatDemo\.idea/dataSources/
+=======
+<<<<<<< HEAD
+/../../../../../../:\Users\李涛\IdeaProjects\chatDemo\.idea/dataSources/
+=======
+/../../../../../../:\Users\李涛\Desktop\chat\.idea/dataSources/
+>>>>>>> b45464577d67ff688d906f0cd1417e6db28f6ff7
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
 /dataSources.local.xml
 # 基于编辑器的 HTTP 客户端请求
 /httpRequests/

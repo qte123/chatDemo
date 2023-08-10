@@ -1,12 +1,16 @@
 package loginView;
 
 import chatView.ChatView;
+<<<<<<< HEAD
 import common.Common;
 import common.UDPBase;
+=======
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
 import window.Windows;
 
 import javax.swing.*;
 import java.awt.*;
+<<<<<<< HEAD
 
 /**
  * 私聊界面
@@ -21,6 +25,49 @@ public class PrivateView extends UDPBase {
     public void view(String name) {
         Common common=new Common();
         common.viewCommon(frame,label);
+=======
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class PrivateView {
+
+    private JFrame frame;
+    private JTextField textField;
+
+    public PrivateView() {
+    }
+
+    public PrivateView(JFrame frame, JTextField textField) {
+        this.frame = frame;
+        this.textField = textField;
+    }
+
+    public JFrame getFrame() {
+        return frame;
+    }
+
+    public void setFrame(JFrame frame) {
+        this.frame = frame;
+    }
+
+    public JTextField getTextField() {
+        return textField;
+    }
+
+    public void setTextField(JTextField textField) {
+        this.textField = textField;
+    }
+
+    public void view(String name) {
+        frame = new JFrame();
+        frame.setTitle("聊天室登录");
+        frame.setIconImage(Toolkit.getDefaultToolkit().getImage("view\\res\\image\\icon.jpg"));
+        frame.setBounds(100, 100, 574, 403);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().setLayout(null);
+
+        JLabel label = new JLabel("欢迎使用聊天室");
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
         label.setFont(new Font("宋体", Font.PLAIN, 21));
         label.setBounds(201, 91, 147, 25);
         frame.getContentPane().add(label);
@@ -30,12 +77,17 @@ public class PrivateView extends UDPBase {
         lblip.setBounds(139, 174, 271, 18);
         frame.getContentPane().add(lblip);
 
+<<<<<<< HEAD
         JTextField textField = new JTextField();
+=======
+        textField = new JTextField();
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
         textField.setBounds(196, 241, 163, 21);
         frame.getContentPane().add(textField);
         textField.setColumns(10);
 
         JButton btnNewButton = new JButton("登录");
+<<<<<<< HEAD
         btnNewButton.addActionListener(arg0 -> {
             Windows windows = new Windows();
             if (!textField.getText().equals("")) {
@@ -46,6 +98,23 @@ public class PrivateView extends UDPBase {
                 chatView.run(str, name);
                 windows.win(ip);
             } else windows.error();
+=======
+        btnNewButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                Windows windows = new Windows();
+                if (!textField.getText().equals("")) {
+                    String ip = textField.getText();
+                    ChatView chatView = new ChatView();
+                    frame.setVisible(false);
+                    String str = "（私聊模式）";
+                    chatView.run(ip, str, name);
+                    windows.win(ip);
+                } else {
+
+                    windows.error();
+                }
+            }
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
         });
         btnNewButton.setBounds(196, 280, 163, 25);
         frame.getContentPane().add(btnNewButton);
@@ -55,5 +124,8 @@ public class PrivateView extends UDPBase {
         frame.getContentPane().add(lblNewLabel);
         frame.setVisible(true);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
 }

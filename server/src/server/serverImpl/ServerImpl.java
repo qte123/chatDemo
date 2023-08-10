@@ -13,11 +13,19 @@ import java.net.DatagramSocket;
 import java.util.Calendar;
 
 public class ServerImpl extends UDPBase implements Server {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
     public ServerImpl() {
     }
 
     public void imageServer(JTextArea textArea) throws IOException {
+<<<<<<< HEAD
         DatagramSocket ds = new DatagramSocket(SERVER_PORT);
+=======
+        DatagramSocket ds = new DatagramSocket(10000);
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
         OutputStream os;
         byte[] bytes = new byte[MAX];
         byte[] bytes1 = new byte[MAX];
@@ -30,9 +38,15 @@ public class ServerImpl extends UDPBase implements Server {
             int hour = calendar.get(Calendar.HOUR);
             int minute = calendar.get(Calendar.MINUTE);
             int second = calendar.get(Calendar.SECOND);
+<<<<<<< HEAD
             String hours = hour <= 9 ? "0" + hour : "" + hour;
             String minutes = minute <= 9 ? "0" + minute : "" + minute;
             String seconds = second <= 9 ? "0" + second : "" + second;
+=======
+            String hours = hour < 9 ? "0" + hour : "" + hour;
+            String minutes = minute < 9 ? "0" + minute : "" + minute;
+            String seconds = second < 9 ? "0" + second : "" + second;
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
             String time = year + "/" + month + "/" + day + " " + hours + ":" + minutes + ":" + seconds;
             DatagramPacket dp = new DatagramPacket(bytes, bytes.length);//txt
             DatagramPacket dp2 = new DatagramPacket(bytes1, bytes1.length);//file
@@ -57,7 +71,11 @@ public class ServerImpl extends UDPBase implements Server {
                 ds.receive(dp2);
                 byte[] data2 = dp2.getData();
                 int length2 = dp2.getLength();
+<<<<<<< HEAD
                 os = new FileOutputStream("view//res//file//" + path);
+=======
+                os = new FileOutputStream("res//file//" + path);
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
                 os.write(data2, 0, length2);
                 os.close();
                 ds.receive(dp3);

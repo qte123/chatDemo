@@ -1,7 +1,10 @@
 package window;
 
+<<<<<<< HEAD
 import common.Common;
 
+=======
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
 import javax.swing.*;
 import java.awt.*;
 
@@ -11,6 +14,21 @@ public class Windows {
     public Windows() {
     }
 
+<<<<<<< HEAD
+=======
+    public Windows(JFrame frame) {
+        this.frame = frame;
+    }
+
+    public JFrame getFrame() {
+        return frame;
+    }
+
+    public void setFrame(JFrame frame) {
+        this.frame = frame;
+    }
+
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
     public void send() {
         frame.setTitle("发送成功");
         frame.setIconImage(Toolkit.getDefaultToolkit().getImage("view\\res\\image\\icon.jpg"));
@@ -20,8 +38,13 @@ public class Windows {
         JLabel lblNewLabel = new JLabel("发送成功！");
         lblNewLabel.setFont(new Font("宋体", Font.PLAIN, 15));
         lblNewLabel.setBounds(90, 29, 75, 18);
+<<<<<<< HEAD
         Common common=new Common();
         common.windowCommon(frame,lblNewLabel);
+=======
+        frame.getContentPane().add(lblNewLabel);
+        frame.setVisible(true);
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
     }
 
     public void error() {
@@ -33,8 +56,13 @@ public class Windows {
         JLabel lblNewLabel = new JLabel("没有输入电脑IP地址或计算机名称");
         lblNewLabel.setFont(new Font("宋体", Font.PLAIN, 15));
         lblNewLabel.setBounds(85, 76, 226, 18);
+<<<<<<< HEAD
         Common common=new Common();
         common.windowCommon(frame,lblNewLabel);
+=======
+        frame.getContentPane().add(lblNewLabel);
+        frame.setVisible(true);
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
     }
 
     public void txtNull() {
@@ -46,8 +74,13 @@ public class Windows {
         JLabel lblNewLabel = new JLabel("发送的消息不能为空！");
         lblNewLabel.setFont(new Font("宋体", Font.PLAIN, 15));
         lblNewLabel.setBounds(122, 77, 150, 18);
+<<<<<<< HEAD
         Common common=new Common();
         common.windowCommon(frame,lblNewLabel);
+=======
+        frame.getContentPane().add(lblNewLabel);
+        frame.setVisible(true);
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
     }
 
     public void win(String ip) {
@@ -64,8 +97,13 @@ public class Windows {
         }
         lblNewLabel.setFont(new Font("宋体", Font.PLAIN, 15));
         lblNewLabel.setBounds(135, 77, 150, 18);
+<<<<<<< HEAD
         Common common=new Common();
         common.windowCommon(frame,lblNewLabel);
+=======
+        frame.getContentPane().add(lblNewLabel);
+        frame.setVisible(true);
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
     }
 
     public void linkError() {
@@ -78,8 +116,13 @@ public class Windows {
         JLabel lblNewLabel = new JLabel("输入的电脑IP地址或计算机名称错误！连接中断");
         lblNewLabel.setFont(new Font("宋体", Font.PLAIN, 15));
         lblNewLabel.setBounds(36, 78, 316, 18);
+<<<<<<< HEAD
         Common common=new Common();
         common.windowCommon(frame,lblNewLabel);
+=======
+        frame.getContentPane().add(lblNewLabel);
+        frame.setVisible(true);
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
     }
 
     public void loginError() {
@@ -92,7 +135,12 @@ public class Windows {
         JLabel lblNewLabel = new JLabel("请输入用户名称！");
         lblNewLabel.setFont(new Font("宋体", Font.PLAIN, 15));
         lblNewLabel.setBounds(137, 75, 120, 18);
+<<<<<<< HEAD
         Common common=new Common();
         common.windowCommon(frame,lblNewLabel);
+=======
+        frame.getContentPane().add(lblNewLabel);
+        frame.setVisible(true);
+>>>>>>> 2bd25d2ceddba32748c567f018eee38767cce85c
     }
 }
